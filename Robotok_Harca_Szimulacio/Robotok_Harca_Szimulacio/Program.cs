@@ -4,32 +4,57 @@
     {
         static void Main(string[] args)
         {
-            int c;
-            do
+            while (true)
             {
-                c = Menu();
-                switch (c)
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("=== Robot Harc Menü ===");
+                Console.ResetColor();
+                Console.WriteLine("1. Új játék indítása");
+                Console.WriteLine("2. Beállítások");
+                Console.WriteLine("3. Kilépés");
+                Console.Write("Válassz egy opciót (1-3): ");
+
+                string input = Console.ReadLine();
+
+                switch (input)
                 {
-                    case 0: break;
-                    case 1: break;
-                    case 2: break;
-                    case 3: break;
-                    case 4: break;
-                    case 5: break;
+                    case "1":
+                        StartGame();
+                        break;
+                    case "2":
+                        Settings();
+                        break;
+                    case "3":
+                        Console.WriteLine("Kilépés... Nyomj ENTER-t a kilépéshez.");
+                        Console.ReadLine();
+                        return;
+                    default:
+                        Console.WriteLine("Érvénytelen választás! Próbáld újra.");
+                        Console.ReadKey();
+                        break;
                 }
-            } while (c != -1);
+            }
+
+            static void StartGame()
+            {
+                Console.Clear();
+                Console.WriteLine("Játék indítása...");
+                Console.WriteLine("Nyomj ENTER-t a folytatáshoz.");
+                Console.ReadLine();
+            }
+
+            static void Settings()
+            {
+                Console.Clear();
+                Console.WriteLine("Beállítások menü...");
+                Console.WriteLine("Nyomj ENTER-t a visszalépéshez.");
+                Console.ReadLine();
+            }
+
+
         }
 
-        static char Menu()
-        {
-            Console.Clear();
-            Console.WriteLine("0 - Kilépés");
-            Console.WriteLine("1 - ");
-            Console.WriteLine("2 - ");
-            Console.WriteLine("3 - ");
-            Console.WriteLine("4 - ");
-            Console.Write("Válasz: ");
-            return Console.ReadKey().KeyChar;
-        }
+       
     }
 }
