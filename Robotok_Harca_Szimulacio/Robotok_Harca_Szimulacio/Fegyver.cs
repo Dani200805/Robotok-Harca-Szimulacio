@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace Robotok_Harca_Szimulacio
 {
-    internal class Fegyver
+    class Fegyver
     {
-        public string Nev { get; set; }
-        public int Sebzes { get; set; }
-        public int Energiafogyasztas { get; set; }
+        public string Nev { get; private set; }
+        public int Sebzes { get; private set; }
 
-        public Fegyver(string nev, int sebzes, int energiafogyasztas)
+        public Fegyver(string nev, int sebzes)
         {
             Nev = nev;
             Sebzes = sebzes;
-            Energiafogyasztas = energiafogyasztas;
         }
     }
 }

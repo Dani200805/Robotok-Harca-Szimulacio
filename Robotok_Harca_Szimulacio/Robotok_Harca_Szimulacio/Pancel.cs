@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace Robotok_Harca_Szimulacio
 {
-    internal class Pancel
+    class Pancel
     {
-        public string Nev { get; set; }
-        public int Vedelem_ertek { get; set; }
-        public int Suly { get; set; }
+        public string Nev { get; private set; }
+        public int Vedelem { get; private set; }
 
-        public Pancel(string nev, int vedelem_ertek, int suly)
+        public Pancel(string nev, int vedelem)
         {
             Nev = nev;
-            Vedelem_ertek = vedelem_ertek;
-            Suly = suly;
+            Vedelem = vedelem;
         }
     }
 }

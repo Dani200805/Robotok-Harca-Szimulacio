@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace Robotok_Harca_Szimulacio
 {
-    internal class Robot
+    class Robot
     {
-        public string Nev { get; set; }
-        public int Hp { get; set; }
-        public int Energia { get; set; }
+        public string Nev { get; private set; }
+        public int Eletero { get; set; }
+        public int Szint { get; private set; }
+        public Fegyver Fegyver { get; set; }
+        public Pancel Pancel { get; set; }
 
-        public Robot(string nev, int hp, int energia)
+        public Robot(string nev, int szint, Fegyver fegyver, Pancel pancel)
         {
             Nev = nev;
-            Hp = hp;
-            Energia = energia;
+            Szint = szint;
+            Fegyver = fegyver;
+            Pancel = pancel;
+            Eletero = 100;
         }
     }
 }
