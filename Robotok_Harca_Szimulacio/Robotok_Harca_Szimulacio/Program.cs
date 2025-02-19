@@ -9,6 +9,10 @@
 
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Robotok Harca Szimuláció");
+            Console.ResetColor();
+            Console.WriteLine("\nRobot Harci Menü:");
             Inicializalas();
             Indit();
         }
@@ -19,8 +23,7 @@
             bool fut = true;
             while (fut)
             {
-                Console.WriteLine("\nRobot Harci Menü:");
-                Console.WriteLine("1. Robot állapot megtekintése");
+                Console.WriteLine("\n1. Robot állapot megtekintése");
                 Console.WriteLine("2. Új fegyver felszerelése");
                 Console.WriteLine("3. Új fegyver hozzáadása");
                 Console.WriteLine("4. Harc indítása");
@@ -136,10 +139,8 @@
 
         static int SzamolGyozelmiEsely(Robot ellenfel)
         {
-            int esely = 50 + (jatekosRobot.Szint - ellenfel.Szint) * 10;
+            int esely = 50 + ((jatekosRobot.Szint - ellenfel.Szint) * 10) + (jatekosRobot.Fegyver.Sebzes) / 5;
             return Math.Max(10, Math.Min(90, esely));
         }
-
-        
     }
 }
