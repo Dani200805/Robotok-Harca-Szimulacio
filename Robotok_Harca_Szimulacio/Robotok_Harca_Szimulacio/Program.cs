@@ -30,6 +30,7 @@
                 Console.WriteLine("5. Kilépés");
                 Console.Write("Válassz egy lehetőséget: ");
                 string valasztas = Console.ReadLine();
+                Console.Clear();
 
                 switch (valasztas)
                 {
